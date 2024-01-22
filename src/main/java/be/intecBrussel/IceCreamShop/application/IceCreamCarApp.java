@@ -1,14 +1,14 @@
-package application;
+package be.intecBrussel.IceCreamShop.application;
 
-import eatables.Eatable;
-import eatables.Flavor;
-import eatables.MagnumType;
-import eatables.Stock;
-import sellers.IceCreamCar;
-import sellers.IceCreamSeller;
-import sellers.PriceList;
+import be.intecBrussel.IceCreamShop.application.eatables.Eatable;
+import be.intecBrussel.IceCreamShop.application.eatables.Flavor;
+import be.intecBrussel.IceCreamShop.application.eatables.MagnumType;
+import be.intecBrussel.IceCreamShop.application.eatables.Stock;
+import be.intecBrussel.IceCreamShop.application.sellers.IceCreamCar;
+import be.intecBrussel.IceCreamShop.application.sellers.IceCreamSeller;
+import be.intecBrussel.IceCreamShop.application.sellers.PriceList;
 
-import static eatables.Flavor.*;
+import static be.intecBrussel.IceCreamShop.application.eatables.Flavor.*;
 
 public class IceCreamCarApp {
     public static void main(String[] args) {

@@ -1,10 +1,15 @@
-package sellers;
+package be.intecBrussel.IceCreamShop.application.sellers;
 
 
 
-import eatables.*;
+import be.intecBrussel.IceCreamShop.application.Exceptions.NoBallsException;
+import be.intecBrussel.IceCreamShop.application.eatables.*;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.Arrays;
+import java.util.Objects;
+
 
 public class IceCreamCar implements IceCreamSeller {
 
@@ -16,7 +21,7 @@ public class IceCreamCar implements IceCreamSeller {
     PriceList priceList;
 
     Stock IceCarStock;
-    double totalProfit;
+    double totalProfit=0;
 
 
     public IceCreamCar() {
@@ -29,13 +34,22 @@ public class IceCreamCar implements IceCreamSeller {
 
     @Override
     public double getProfit() {
-        return totalProfit;
+        BigDecimal resultBigDecimal = new BigDecimal(totalProfit).setScale(4, RoundingMode.HALF_UP);
+        double result = resultBigDecimal.doubleValue();
+        return result;
     }
 
     @Override
     public Cone orderCone(Flavor[] newConeWithFlavours) {
-        this.totalProfit=this.totalProfit+(newConeWithFlavours.length*priceList.ballPrice*0.25);
-        return prepareCone(newConeWithFlavours);
+
+        if (newConeWithFlavours ==null) {
+            System.out.println("You have no balls!!!");
+            return null; //throw new NoBallsException();
+        }
+
+            this.totalProfit=this.totalProfit+(newConeWithFlavours.length*priceList.ballPrice*0.25);
+            return prepareCone(newConeWithFlavours);
+
     }
 
     private Cone prepareCone(Flavor[] newConeWithFlavours) {
@@ -43,6 +57,7 @@ public class IceCreamCar implements IceCreamSeller {
         //There is no separate stock for flavours.
         //Presumably people will accept any flavor if they want an ice-cream.
         //Attention: order will be terminated if balls ordered exceeds stock, potentially leaving a few balls in stock.
+        if (newConeWithFlavours==null||IceCarStock==null) return null;
         if (IceCarStock.getCones()>0 && (IceCarStock.getBalls()- Arrays.stream(newConeWithFlavours).count()>0)) {
             IceCarStock.setCones(IceCarStock.getCones() - 1);
             IceCarStock.setBalls(IceCarStock.getBalls() - ((int)Arrays.stream(newConeWithFlavours).count()));
@@ -56,42 +71,40 @@ public class IceCreamCar implements IceCreamSeller {
 
     @Override
     public IceRocket orderIceRocket() {
-        this.totalProfit=this.totalProfit+(0.2*priceList.getRocketPrice());
-        return prepareRocket();
+
+       if (IceCarStock.getIceRockets()>0) return prepareRocket();
+
+       System.out.println("NO MORE ICE ROCKETS");
+       return null;
     }
 
     private IceRocket prepareRocket() {
         //Check stock for enough iceRockets
-       if (IceCarStock.getIceRockets()>0) {
-           IceCarStock.setIceRockets(IceCarStock.getIceRockets() - 1);
-           return new IceRocket();
-       }
-       else {
-           System.out.println("NO MORE ICE ROCKETS");
-           return null;
-       }
+
+        IceCarStock.setIceRockets(IceCarStock.getIceRockets() - 1);
+        this.totalProfit=this.totalProfit+(0.2*priceList.getRocketPrice());
+        return new IceRocket();
 
     }
 
     @Override
     public Magnum orderMagnum(MagnumType aMagnumtype) {
-        this.totalProfit=this.totalProfit+(0.01*priceList.getMagnumPrice(aMagnumtype));
-        return prepareMagnum(aMagnumtype);
-    }
-
-    private Magnum prepareMagnum(MagnumType aMagnumtype) {
         //Check stock for enough magnums.
         // There is no separation by type (UML does not give stock variables for magnum type).
         // The logic is presumably that people will substitute for different types :-)
-
+        if (aMagnumtype ==null) return null;
         if (IceCarStock.getMagni()>0) {
-            IceCarStock.setMagni(IceCarStock.getMagni() - 1);
-            return new Magnum(aMagnumtype);
+            return prepareMagnum(aMagnumtype);
         }
-        else {
-            System.out.println("NO MORE MAGNUMS");
-            return null;
-        }
+        System.out.println("NO MORE MAGNUMS");
+        return null;
+    }
+
+    private Magnum prepareMagnum(MagnumType aMagnumtype) {
+
+        this.totalProfit=this.totalProfit+(0.01*priceList.getMagnumPrice(aMagnumtype));
+        IceCarStock.setMagni(IceCarStock.getMagni() - 1);
+        return new Magnum(aMagnumtype);
 
     }
 
@@ -102,5 +115,17 @@ public class IceCreamCar implements IceCreamSeller {
                 +IceCarStock
                 +"\nTotalProfit= " + totalProfit
                 +"\n______________________________________________________________________________________________\n";
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof IceCreamCar that)) return false;
+        return Double.compare(totalProfit, that.totalProfit) == 0 && Objects.equals(priceList, that.priceList) && Objects.equals(IceCarStock, that.IceCarStock);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(priceList, IceCarStock, totalProfit);
     }
 }

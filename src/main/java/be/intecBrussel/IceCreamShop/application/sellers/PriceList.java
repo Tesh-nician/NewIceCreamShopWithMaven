@@ -1,6 +1,8 @@
-package sellers;
+package be.intecBrussel.IceCreamShop.application.sellers;
 
-import eatables.MagnumType;
+import be.intecBrussel.IceCreamShop.application.eatables.MagnumType;
+
+import java.util.Objects;
 
 public class PriceList {
     double ballPrice;
@@ -79,6 +81,19 @@ public class PriceList {
                 ", rocket ice-lolly= " + rocketPrice +
                 ", magnum (standard)= " + magnumStandardPrice
                 +"\n";
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        PriceList priceList = (PriceList) o;
+        return Double.compare(getBallPrice(), priceList.getBallPrice()) == 0 && Double.compare(getRocketPrice(), priceList.getRocketPrice()) == 0 && Double.compare(magnumStandardPrice, priceList.magnumStandardPrice) == 0;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getBallPrice(), getRocketPrice(), magnumStandardPrice);
     }
 }
 

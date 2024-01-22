@@ -1,4 +1,4 @@
-package sellers;
+package be.intecBrussel.IceCreamShop.application.sellers;
 
 @FunctionalInterface
 public interface Profitable {

@@ -1,4 +1,4 @@
-package eatables;
+package be.intecBrussel.IceCreamShop.application.eatables;
 
 public enum MagnumType {
     MILKCHOCOLATE,

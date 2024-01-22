@@ -10,12 +10,19 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2b4ixhZzzhSaGv4Oi3z2dJMXeHq" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -24,12 +31,146 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.IceCreamApp.executor": "Run",
+    "Application.IceCreamCarApp.executor": "Run",
+    "Application.be.intecBrussel.IceCreamShop.application.IceCreamApp.executor": "Run",
+    "Application.be.intecBrussel.IceCreamShop.application.IceCreamCarApp.executor": "Run",
+    "JUnit.IceCreamCarTest.executor": "Run",
+    "JUnit.IceCreamCarTest.testIceCreamCar.executor": "Run",
+    "JUnit.IceCreamCarTest.testOrderCone_WithProfitAndStock.executor": "Run",
+    "JUnit.IceCreamCarTest.testOrderIceRocket_WithProfit (1).executor": "Run",
+    "JUnit.IceCreamCarTest.testOrderIceRocket_WithProfit.executor": "Run",
+    "JUnit.IceCreamCarTest.testOrderMagnum_WithProfit.executor": "Run",
+    "JUnit.IceCreamCarTest.testOrderMagnum_WithProfitAndStock.executor": "Run",
+    "JUnit.IceCreamSalonTest.executor": "Run",
+    "JUnit.PriceListTest.executor": "Run",
+    "JUnit.PriceListTest.testGetBallPrices.executor": "Run",
+    "JUnit.PriceListTest.testGetMagnumPrices.executor": "Run",
+    "JUnit.PriceListTest.testGetRocketPrices.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true"
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/intec/IdeaProjects/NewIceCreamShopWithMaven/src/main/java",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
+  },
+  "keyToStringList": {
+    "GitStage.ChangesTree.GroupingKeys": [
+      "directory",
+      "module",
+      "repository"
+    ]
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\intec\IdeaProjects\NewIceCreamShopWithMaven\src\main\java" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="be.intecBrussel.IceCreamShop.sellers" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.IceCreamCarTest">
+    <configuration name="IceCreamCarTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="NewIceCreamShopWithMaven" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="be.intecBrussel.IceCreamShop.sellers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="be.intecBrussel.IceCreamShop.sellers" />
+      <option name="MAIN_CLASS_NAME" value="be.intecBrussel.IceCreamShop.sellers.IceCreamCarTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IceCreamCarTest.testOrderCone_WithProfitAndStock" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="NewIceCreamShopWithMaven" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="be.intecBrussel.IceCreamShop.sellers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="be.intecBrussel.IceCreamShop.sellers" />
+      <option name="MAIN_CLASS_NAME" value="be.intecBrussel.IceCreamShop.sellers.IceCreamCarTest" />
+      <option name="METHOD_NAME" value="testOrderCone_WithProfitAndStock([Lbe.intecBrussel.IceCreamShop.application.eatables.Flavor;,be.intecBrussel.IceCreamShop.application.eatables.Cone,be.intecBrussel.IceCreamShop.application.eatables.Stock,be.intecBrussel.IceCreamShop.application.sellers.PriceList,double,int,int)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IceCreamCarTest.testOrderIceRocket_WithProfit (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="NewIceCreamShopWithMaven" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="be.intecBrussel.IceCreamShop.sellers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="be.intecBrussel.IceCreamShop.sellers" />
+      <option name="MAIN_CLASS_NAME" value="be.intecBrussel.IceCreamShop.sellers.IceCreamCarTest" />
+      <option name="METHOD_NAME" value="testOrderIceRocket_WithProfit(int,int,double,double)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IceCreamCarTest.testOrderIceRocket_WithProfit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="NewIceCreamShopWithMaven" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="be.intecBrussel.IceCreamShop.sellers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="be.intecBrussel.IceCreamShop.sellers" />
+      <option name="MAIN_CLASS_NAME" value="be.intecBrussel.IceCreamShop.sellers.IceCreamCarTest" />
+      <option name="METHOD_NAME" value="testOrderIceRocket_WithProfit(int,double,double)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IceCreamCarTest.testOrderMagnum_WithProfitAndStock" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="NewIceCreamShopWithMaven" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="be.intecBrussel.IceCreamShop.sellers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="be.intecBrussel.IceCreamShop.sellers" />
+      <option name="MAIN_CLASS_NAME" value="be.intecBrussel.IceCreamShop.sellers.IceCreamCarTest" />
+      <option name="METHOD_NAME" value="testOrderMagnum_WithProfitAndStock(be.intecBrussel.IceCreamShop.application.eatables.MagnumType,be.intecBrussel.IceCreamShop.application.eatables.Magnum,be.intecBrussel.IceCreamShop.application.eatables.Stock,double,int)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.IceCreamCarTest" />
+        <item itemvalue="JUnit.IceCreamCarTest.testOrderCone_WithProfitAndStock" />
+        <item itemvalue="JUnit.IceCreamCarTest.testOrderMagnum_WithProfitAndStock" />
+        <item itemvalue="JUnit.IceCreamCarTest.testOrderIceRocket_WithProfit (1)" />
+        <item itemvalue="JUnit.IceCreamCarTest.testOrderIceRocket_WithProfit" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-17.0.10-corretto-17.0.10-4caba194b151-5cd809f4" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -39,6 +180,35 @@
       <option name="presentableId" value="Default" />
       <updated>1705481003000</updated>
     </task>
+    <task id="LOCAL-00001" summary="Update">
+      <option name="closed" value="true" />
+      <created>1705586714573</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1705586714573</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/be/intecBrussel/IceCreamShop/application/sellers/PriceList.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/be/intecBrussel/IceCreamShop/application/sellers/PriceList.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
